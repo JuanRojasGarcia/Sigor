@@ -1,0 +1,62 @@
+<%= form_for(anteproyecto) do |f| %>
+  <% if anteproyecto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(anteproyecto.errors.count, "error") %> prohibited this anteproyecto from being saved:</h2>
+
+      <ul>
+      <% anteproyecto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :objetivo %>
+    <%= f.text_field :objetivo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :justificacion %>
+    <%= f.text_field :justificacion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cronograma %>
+    <%= f.text_field :cronograma %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descripcionactividad %>
+    <%= f.text_field :descripcionactividad %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nombreempresa %>
+    <%= f.text_field :nombreempresa %>
+  </div>
+
+  <div class="field">
+    <%= f.label :direccionempresa %>
+    <%= f.text_field :direccionempresa %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telefonoempresa %>
+    <%= f.text_field :telefonoempresa %>
+  </div>
+
+  <div class="field">
+    <%= f.label :estatus %>
+    <%= f.text_field :estatus %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

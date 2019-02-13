@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Anteproyectos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Objetivo</th>
+      <th>Justificacion</th>
+      <th>Cronograma</th>
+      <th>Descripcionactividad</th>
+      <th>Nombreempresa</th>
+      <th>Direccionempresa</th>
+      <th>Telefonoempresa</th>
+      <th>Estatus</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anteproyectos.each do |anteproyecto| %>
+      <tr>
+        <td><%= anteproyecto.nombre %></td>
+        <td><%= anteproyecto.objetivo %></td>
+        <td><%= anteproyecto.justificacion %></td>
+        <td><%= anteproyecto.cronograma %></td>
+        <td><%= anteproyecto.descripcionactividad %></td>
+        <td><%= anteproyecto.nombreempresa %></td>
+        <td><%= anteproyecto.direccionempresa %></td>
+        <td><%= anteproyecto.telefonoempresa %></td>
+        <td><%= anteproyecto.estatus %></td>
+        <td><%= link_to 'Show', anteproyecto %></td>
+        <td><%= link_to 'Edit', edit_anteproyecto_path(anteproyecto) %></td>
+        <td><%= link_to 'Destroy', anteproyecto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anteproyecto', new_anteproyecto_path %>

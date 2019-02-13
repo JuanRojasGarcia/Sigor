@@ -1,0 +1,2 @@
+class Anteproyecto < ApplicationRecord
+end

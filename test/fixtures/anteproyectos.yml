@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  objetivo: MyString
+  justificacion: MyString
+  cronograma: MyString
+  descripcionactividad: MyString
+  nombreempresa: MyString
+  direccionempresa: MyString
+  telefonoempresa: MyString
+  estatus: MyString
+
+two:
+  nombre: MyString
+  objetivo: MyString
+  justificacion: MyString
+  cronograma: MyString
+  descripcionactividad: MyString
+  nombreempresa: MyString
+  direccionempresa: MyString
+  telefonoempresa: MyString
+  estatus: MyString

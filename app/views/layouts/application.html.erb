@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="assets/application.js"></script>
+ <link rel="stylesheet" type="text/css" href="assets/application.css">
+    <title>Sigor</title>
+
+
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+
+     <% if user_signed_in? %>
+      Estas logeao Como: <strong><%= current_user.tipousuario %></strong>.
+      <%= link_to 'Editar Perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :get, :class => 'navbar-link'  %>
+      <% else %>
+      <a href="/users/sign_in">Login</a>
+     <a href="/users/sign_up">Sign Up</a>
+      <% end %>
+    <%= yield %>
+  </body>
+</html>
